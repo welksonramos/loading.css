@@ -1,0 +1,272 @@
+/*
+ * ====================================================================
+ *
+ * Loading.css
+ * Tiny loaders and spinners made with only css and one div
+ * Version - 0.1.0
+ * Author: Welkson Ramos
+ * Source: https://github.com/welksonramos/loading.css
+ *
+ * Licensed under the MIT license - http://opensource.org/licenses/MIT
+ *
+ * ====================================================================
+ */
+* {
+  box-sizing: border-box;
+}
+.loading {
+  width: 50px;
+  height: 50px;
+  margin: 0 calc(30 / 2);
+  text-indent: 100%;
+}
+.ldgBalls {
+  width: 20px;
+  animation: ldgBalls 1s linear infinite;
+}
+.ldgBalls::before {
+  position: absolute;
+  content: '';
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background-color: rgba(211,47,47,0.9);
+  top: 0;
+  left: 0;
+  animation: ldgBallsBefore 3s ease-in-out infinite;
+}
+.ldgBalls::after {
+  position: absolute;
+  content: '';
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background-color: rgba(211,47,47,0.9);
+  bottom: 0;
+  right: 0;
+  animation: ldgBallsAfter 3s ease-in-out infinite;
+}
+@keyframes ldgBalls {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes ldgBallsBefore {
+  0% {
+    transform: translate(-5px, -5px);
+  }
+  50% {
+    transform: translate(-5px, -5px);
+  }
+  100% {
+    transform: translate(-5px, -5px);
+  }
+}
+@keyframes ldgBallsAfter {
+  0% {
+    transform: translate(5px, 5px);
+  }
+  50% {
+    transform: translate(0, 0);
+  }
+  100% {
+    transform: translate(5px, 5px);
+  }
+}
+.ldgBar {
+  position: relative;
+  width: 100%;
+  height: 4px;
+  background: rgba(0,0,0,0.1);
+  overflow: hidden;
+}
+.ldgBar::before {
+  position: absolute;
+  display: block;
+  content: "";
+  left: -50px;
+  width: 50px;
+  height: 4px;
+  background: rgba(211,47,47,0.9);
+  animation: ldgBar 2s linear infinite;
+}
+@keyframes ldgBar {
+  0% {
+    left: -50px;
+    width: 30%;
+  }
+  50% {
+    width: 30%;
+  }
+  70% {
+    width: 70%;
+  }
+  80% {
+    left: 50%;
+  }
+  95% {
+    left: 120%;
+  }
+  100% {
+    left: 100%;
+  }
+}
+.ldgBattery {
+  position: relative;
+  margin: 0 auto;
+  border: 1px solid rgba(211,47,47,0.9);
+  border-radius: 3px;
+  width: 50px;
+  height: 20px;
+}
+.ldgBattery::before {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  height: 18px;
+  background-color: rgba(211,47,47,0.9);
+  border-radius: 1px;
+  animation: ldgBattery 5s linear infinite;
+}
+.ldgBattery::after {
+  content: '';
+  display: block;
+  position: absolute;
+  right: -4px;
+  top: 6px;
+  width: 3px;
+  height: 5px;
+  background-color: rgba(211,47,47,0.9);
+  border-radius: 1px;
+}
+@keyframes ldgBattery {
+  0% {
+    width: 0%;
+  }
+  25% {
+    width: 24%;
+  }
+  50% {
+    width: 48%;
+  }
+  75% {
+    width: 72%;
+  }
+  100% {
+    width: 96%;
+  }
+}
+.ldgDualRing {
+  border: 5px solid rgba(0,0,0,0.1);
+  border-right-color: rgba(211,47,47,0.9);
+  border-left-color: rgba(211,47,47,0.9);
+  border-radius: 50%;
+  animation: ldgRing 1s linear infinite;
+}
+.ldgFlip {
+  transform-style: preserve-3d;
+  perspective: 10em;
+  background: rgba(211,47,47,0.9);
+  animation: ldgFlip 2s linear infinite;
+}
+@keyframes ldgFlip {
+  0% {
+    transform: rotateY(0deg) rotateX(0deg);
+  }
+  25% {
+    transform: rotateY(360deg) rotateX(0deg);
+  }
+  50% {
+    transform: rotateY(360deg) rotateX(360deg);
+  }
+  75% {
+    transform: rotateY(0deg) rotateX(360deg);
+  }
+  100% {
+    transform: rotateY(0deg) rotateX(0deg);
+  }
+}
+.ldgRing {
+  border: 5px solid rgba(255,255,255,0.1);
+  border-right-color: rgba(211,47,47,0.9);
+  border-radius: 50%;
+  animation: ldgRing 1.2s linear infinite;
+}
+@keyframes ldgRing {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+.ldgSignal {
+  border: 5px solid rgba(211,47,47,0.9);
+  border-radius: 50%;
+  opacity: 0;
+  animation: ldgSignal 1s ease-out infinite;
+}
+@keyframes ldgSignal {
+  0% {
+    transform: scale(0.1);
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1.2);
+    opacity: 0;
+  }
+}
+.ldgSquare {
+  position: relative;
+  border: 5px solid rgba(211,47,47,0.9);
+  animation: ldgSquare 4s ease infinite;
+}
+.ldgSquare::before {
+  position: absolute;
+  content: "";
+  display: block;
+  width: 100%;
+  top: 0;
+  left: 0;
+  background: rgba(211,47,47,0.9);
+  opacity: 1;
+  animation: ldgSquareInner 4s ease-in infinite;
+}
+@keyframes ldgSquare {
+  0% {
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: rotate(180deg);
+  }
+  50% {
+    transform: rotate(180deg);
+  }
+  75% {
+    transform: rotate(360deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes ldgSquareInner {
+  0% {
+    height: 0%;
+  }
+  25% {
+    height: 0%;
+  }
+  50% {
+    height: 100%;
+  }
+  75% {
+    height: 100%;
+  }
+  100% {
+    height: 0%;
+  }
+}
