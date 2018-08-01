@@ -1,0 +1,47 @@
+.ldgBalls
+    width 20px
+    animation ldgBalls 1s linear infinite
+
+.ldgBalls::before
+    position absolute
+    content ''
+    width 16px
+    height 16px
+    border-radius 50%
+    background-color $defaultColor
+    top 0
+    left 0
+    animation ldgBallsBefore 3s ease-in-out infinite
+
+.ldgBalls::after
+    position absolute
+    content ''
+    width 16px
+    height 16px
+    border-radius 50%
+    background-color $defaultColor
+    bottom 0
+    right 0
+    animation ldgBallsAfter 3s ease-in-out infinite
+
+@keyframes ldgBalls
+  0%
+    transform rotate(0)
+  100%
+    transform rotate(360deg)
+
+@keyframes ldgBallsBefore
+  0%
+    transform translate(-5px, -5px)
+  50%
+    transform translate(-5px, -5px)
+  100%
+    transform translate(-5px, -5px)
+
+@keyframes ldgBallsAfter
+  0%
+    transform translate(5px, 5px)
+  50%
+    transform translate(0,0)
+  100%
+    transform translate(5px, 5px)

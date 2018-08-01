@@ -1,0 +1,17 @@
+.ldgFlip
+  transform-style preserve-3d
+  perspective 10em
+  background $defaultColor
+  animation ldgFlip 2s linear infinite
+
+@keyframes ldgFlip
+  0%
+    transform rotateY(0deg) rotateX(0deg)
+  25%
+    transform rotateY(360deg) rotateX(0deg)
+  50%
+    transform rotateY(360deg) rotateX(360deg)
+  75%
+    transform rotateY(0deg) rotateX(360deg)
+  100%
+    transform rotateY(0deg) rotateX(0deg)

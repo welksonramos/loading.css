@@ -1,0 +1,40 @@
+.ldgBattery
+  position relative
+  margin 0 auto
+  border 1px solid $defaultColor
+  border-radius 3px
+  width 50px
+  height 20px
+
+.ldgBattery::before
+  position absolute
+  content ""
+  top 0
+  left 0
+  height 18px
+  background-color $defaultColor
+  border-radius 1px
+  animation ldgBattery 5s linear infinite
+
+.ldgBattery::after
+  content ''
+  display block
+  position absolute
+  right -4px
+  top 6px;
+  width 3px
+  height 5px
+  background-color $defaultColor
+  border-radius 1px
+
+@keyframes ldgBattery
+  0%
+    width 0%
+  25%
+    width 24%
+  50%
+    width 48%
+  75%
+    width 72%
+  100%
+    width 96%
