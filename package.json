@@ -1,0 +1,48 @@
+{
+  "name": "loading-css",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Tiny loaders and spinners made with only css and one div",
+  "main": "loading.css",
+  "scripts": {
+    "start": "npm run build",
+    "build": "stylus ./src/loading.styl --out loading.css && npm run minify",
+    "minify": "stylus -c ./src/loading.styl --out loading.min.css",
+    "watch": "onchange \"src/**/*.styl\" -- npm run build",
+    "docs": "copyfiles index.html *.css ./docs",
+    "server": "browser-sync start --files \"*.html, src/**/*.styl\" --server",
+    "dev": "parallelshell \"npm run start\" \"npm run watch\" \"npm run server\"",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "css",
+    "loaders",
+    "spinners",
+    "animation"
+  ],
+  "files": [
+    "loading.css",
+    "loading.min.css"
+  ],
+  "author": "Welkson Ramos <welksonr@hotmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "browser-sync": "^2.24.6",
+    "copyfiles": "^2.0.0",
+    "onchange": "^4.1.0",
+    "parallelshell": "^3.0.2",
+    "stylus": "^0.54.5"
+  },
+  "directories": {
+    "doc": "docs"
+  },
+  "dependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/welksonramos/loading.css.git"
+  },
+  "bugs": {
+    "url": "https://github.com/welksonramos/loading.css/issues"
+  },
+  "homepage": "https://github.com/welksonramos/loading.css#readme"
+}
