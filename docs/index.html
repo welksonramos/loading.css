@@ -97,15 +97,25 @@
       font-size: 0.6em;
     }
 
+    footer {
+      position: absolute;
+      width: 100%;
+      padding: 20px 0;
+      bottom: 0;
+      left: 0;
+    }
+
     .credits {
       font-size: 0.5em;
+      text-align: center;
     }
 
     .credits a {
       color: rgba(211, 47, 47, 1);
+      text-decoration: none;
     }
 
-    .credits a:before {
+    .credits a:last-child:after {
       content: "\2764";
       display: inline-block;
       margin: 0 3px;
@@ -127,7 +137,8 @@
     <h1>Loading.css</h1>
     <h2>Tiny loaders and spinners made with only css and one div</h2>
     <div class="downloads">
-      <a href="https://github.com/welksonramos/loading.css/blob/master/loading.css">Download</a>
+      <a href="https://github.com/welksonramos/loading.css/blob/master/loading.css">Download CSS
+      </a>
       <a href="https://github.com/welksonramos/loading.css">View on Github</a>
     </div>
   </header>
@@ -164,13 +175,15 @@
       <div class="loading ldgSquare"></div>
       <p>.ldgSquare</p>
     </div>
-    <footer>
-      <div class="credits">
-        <p>Made with by
-          <a href="https://twitter.com/welksonramos">@welksonramos</a>
-        </p>
-      </div>
-    </footer>
+  </div>
+  <footer>
+    <div class="credits">
+      <p>Made by
+        <a href="https://twitter.com/welksonramos">@welksonramos</a> using
+        <a href="http://stylus-lang.com/">Stylus</a>
+      </p>
+    </div>
+  </footer>
 </body>
 
 </html>
