@@ -4,6 +4,7 @@
   "private": true,
   "description": "Tiny loaders and spinners made with only css and one div",
   "main": "loading.css",
+  "style": "loading.css",
   "scripts": {
     "start": "npm run build",
     "build": "stylus ./src/loading.styl --out loading.css && npm run minify",
@@ -21,6 +22,7 @@
     "animation"
   ],
   "files": [
+    "LICENSE",
     "loading.css",
     "loading.min.css"
   ],
