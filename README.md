@@ -2,6 +2,7 @@
 
 >  In progress :hourglass_flowing_sand:
 
+<img src="preview-loading-css.gif" width="300px"/>
 
 ## Usage
 
