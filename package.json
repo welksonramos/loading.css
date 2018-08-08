@@ -5,14 +5,13 @@
   "style": "loading.css",
   "main": "loading.css",
   "scripts": {
-    "start": "npm run build",
     "build": "stylus ./src/loading.styl --out loading.css && npm run minify",
     "minify": "stylus -c ./src/loading.styl --out loading.min.css",
     "watch": "onchange \"src/**/*.styl\" -- npm run build",
     "docs": "copyfiles index.html *.css ./docs",
     "server": "browser-sync start --files \"*.html, src/**/*.styl\" --server",
     "dev": "parallelshell \"npm run start\" \"npm run watch\" \"npm run server\"",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "stylelint loading.css"
   },
   "keywords": [
     "css",
@@ -21,6 +20,7 @@
     "animation"
   ],
   "files": [
+    "/src/**/*",
     "LICENSE",
     "loading.css",
     "loading.min.css"
@@ -32,6 +32,8 @@
     "copyfiles": "^2.0.0",
     "onchange": "^4.1.0",
     "parallelshell": "^3.0.2",
+    "stylelint": "^9.4.0",
+    "stylelint-config-standard": "^18.2.0",
     "stylus": "^0.54.5"
   },
   "repository": {
