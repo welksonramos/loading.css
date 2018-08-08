@@ -1,17 +1,36 @@
 # loading.css
 
->  In progress :hourglass_flowing_sand:
+>  Tiny loaders and spinners made with only css and one div 
+[See demo](https://welksonramos.github.io/loading.css/)
 
-<img src="preview-loading-css.gif" width="300px"/>
+<img src="preview-loading-css.gif"/>
+
+## Install
+### Fork this repo
+
+```
+$ git clone https://github.com/welksonramos/loading.css.git
+```
+### NPM
+
+```
+$ npm install loading-css --save
+```
+### Manually
+Download `loading.css` or `loading.min.css` from this repo and add it to your HTML.
+
 
 ## Usage
 
 1. Include the stylesheet on your document's `<head>`
 
 ```html
-<head>
-<link rel="stylesheet" type="text/css" href="/path/to/loading.min.css">
-</head>
+<link rel="stylesheet"  href="/path/to/loading.css">
+```
+or
+
+```html
+<link rel="stylesheet"  href="/path/to/loading.min.css">
 ```
 
 2. Add the `loading` class followed by the appropriate [class name](#loading-style-classes) of  for the spinner.
@@ -54,6 +73,14 @@ loading.css/
 |-- package.json
 |-- ...
 ````
+## Tasks
+
+```
+$ npm run start
+$ npm run minify
+$ npm run dev
+
+```
 
 # License
 
