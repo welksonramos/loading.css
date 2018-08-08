@@ -1,6 +1,7 @@
 # loading.css
 >  Tiny loaders and spinners made with only css and one div 
 [See demo](https://welksonramos.github.io/loading.css/)
+
 [![npm](https://img.shields.io/npm/v/loading-css.svg)](https://www.npmjs.com/package/loading-css) [![Build Status](https://travis-ci.org/welksonramos/loading.css.svg?branch=master)](https://travis-ci.org/welksonramos/loading.css) 
 [![GitHub license](https://img.shields.io/github/license/welksonramos/loading.css.svg)](https://github.com/welksonramos/loading.css/blob/master/LICENSE)
 
