@@ -10,7 +10,7 @@
     "watch": "onchange \"src/**/*.styl\" -- npm run build",
     "docs": "copyfiles index.html *.css ./docs",
     "server": "browser-sync start --files \"*.html, src/**/*.styl\" --server",
-    "dev": "parallelshell \"npm run start\" \"npm run watch\" \"npm run server\"",
+    "dev": "parallelshell \"npm run build\" \"npm run watch\" \"npm run server\"",
     "test": "stylelint loading.css"
   },
   "keywords": [
