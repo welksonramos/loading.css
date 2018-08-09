@@ -1,6 +1,6 @@
 {
   "name": "loading-css",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "Tiny loaders and spinners made with only css and one div",
   "style": "loading.css",
   "main": "loading.css",
