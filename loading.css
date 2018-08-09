@@ -190,6 +190,81 @@
     transform: rotateY(0deg) rotateX(0deg);
   }
 }
+.ldgHourglass {
+  border-style: solid;
+  border-width: 30px 25px;
+  border-color: rgba(211,47,47,0.9) transparent;
+  border-radius: 10%;
+  position: relative;
+  animation: ldgHourglass 2s linear infinite;
+}
+.ldgHourglass::before {
+  content: '';
+  width: 25px;
+  height: 20px;
+  border-style: solid;
+  border-width: 26px 17px;
+  border-color: #fff transparent transparent;
+  border-radius: 10%;
+  position: absolute;
+  top: -27px;
+  left: -17px;
+  animation: ldgHourglassBefore 2s linear infinite;
+}
+.ldgHourglass::after {
+  content: '';
+  width: 25px;
+  height: 20px;
+  border-style: solid;
+  border-width: 0 17px;
+  border-color: transparent transparent #fff;
+  border-radius: 10%;
+  position: absolute;
+  bottom: -27px;
+  left: -17px;
+  animation: ldgHourglassAfter 2s linear infinite;
+}
+@keyframes ldgHourglass {
+  0% {
+    transform: rotate(0deg);
+  }
+  90% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(180deg);
+  }
+}
+@keyframes ldgHourglassBefore {
+  0% {
+    width: 25;
+    top: -23px;
+    border-width: 26px 17px;
+  }
+  90% {
+    width: 0;
+    top: 0;
+    left: 0;
+    border-width: 0 0;
+  }
+  100% {
+    width: 0;
+    top: 0;
+    left: 0;
+    border-width: 0 0;
+  }
+}
+@keyframes ldgHourglassAfter {
+  0% {
+    border-width: 0 17px;
+  }
+  90% {
+    border-width: 26px 17px;
+  }
+  100% {
+    border-width: 26px 17px;
+  }
+}
 .ldgRing {
   border: 5px solid rgba(255,255,255,0.1);
   border-right-color: rgba(211,47,47,0.9);
